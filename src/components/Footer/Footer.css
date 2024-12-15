@@ -1,0 +1,52 @@
+footer {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #aaa8a8; 
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%; 
+}
+
+footer a {
+    width: 30px;
+    height: 30px;
+    opacity: 65%; 
+    fill: white;
+}
+
+footer a:hover {
+    opacity: 100%;
+    padding-top: 5px;
+    margin-bottom: -5px;
+    transition: 1s; 
+}
+
+
+@media only screen and (max-width: 420px) {
+    
+    footer {
+      margin-top: 0px;
+      width: 100%; 
+    }
+    
+    .nav-item:hover {
+      padding-top: 0px;
+      margin-bottom: 0px;
+      transition: none; 
+    } 
+}
+  
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+    footer {
+        margin-top: 120px;
+        width: 100%;
+    }
+}
