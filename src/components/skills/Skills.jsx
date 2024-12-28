@@ -11,7 +11,6 @@ import githubLogo from '../../assets/images/github.png'
 import cPlusPlusLogo from '../../assets/images/c++.png'
 import wordpressLogo from '../../assets/images/wordpress.png'
 import vueJsLogo from '../../assets/images/vueJs.png'
-import mysqlLogo from '../../assets/images/Mysql.png'
 import typescriptLogo from '../../assets/images/Typescript.png'
 
 const Skills = () => {
@@ -57,9 +56,6 @@ const Skills = () => {
           </li>
           <li className="h-[190px] w-[90px] text-center">
             <img src={vueJsLogo} alt="Vue.js logo" className="h-[40px] mt-[75px] mb-[75px] mx-[2px] md:mx-[25px] block" />
-          </li>
-          <li className="h-[190px] w-[90px] text-center">
-            <img src={mysqlLogo} alt="Mysql logo" className="h-[30px] md:h-[40px] mt-[75px] mb-[75px] mx-[2px] md:mx-[25px] block" />
           </li>
           <li className="h-[190px] w-[90px] text-center">
             <img src={typescriptLogo} alt="Typescript logo" className="h-[30px] md:h-[40px] mt-[75px] mb-[75px] mx-[2px] md:mx-[25px] block" />
