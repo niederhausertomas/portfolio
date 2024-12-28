@@ -79,9 +79,10 @@ const CarouselHover = () => {
   const [hoveredProjectId, setHoveredProjectId] = useState(null);
 
   return (
-    <div className="md:flex justify-center gap-1">
+    <div className="md:flex justify-center gap-1 mx-auto">
       {projects.map((project) => (
         <div 
+          key={project.id}
           className="items-center flex justify-center"
           onMouseEnter={() => setHoveredProjectId(project.id)}
           onMouseLeave={() => setHoveredProjectId(null)}

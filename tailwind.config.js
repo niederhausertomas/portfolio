@@ -7,6 +7,13 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '640px',  // Pantallas pequeñas
+        md: '768px',  // Pantallas medianas
+        lg: '1024px', // Pantallas grandes
+        xl: '1280px', // Pantallas extra grandes
+        '2xl': '1536px', // Pantallas extra extra grandes
+      },
       keyframes: {
         typing: {
           'from': { width: '0ch' },
@@ -15,13 +22,13 @@ export default {
         blink: {
           '50%': { 'border-color': 'transparent' },
         },
-        animation: {
-          'marquee': 'marquee 30s linear infinite',
-        },
         marquee: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+      },
+      animation: {
+        'marquee': 'marquee 30s linear infinite',
       },
     },
     screens: {
