@@ -12,7 +12,7 @@ const Main = () => {
   return (
     <main className='w-full'>
 
-      <h2 className="p-10 pb-0 mb-0 w-full text-[50px] text-center text-[#aaa8a8] mt-[30px]" id="studies">
+      <h2 className="p-10 pb-0 mb-0 w-full text-[50px] text-center text-[#aaa8a8] mt-[30px]" id="experience">
         {t("experience")}
       </h2>
       <Experience/>
