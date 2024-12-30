@@ -56,7 +56,7 @@ const projects = [
   },
   {
     id: 8,
-    name: 'Felipe Niederhauser Photo Journalist',
+    name: 'Photo Journalist',
     href: 'https://felipe-niederhauser.netlify.app/',
     imageSrc: felipeNiederhauser,
   },
@@ -75,7 +75,6 @@ const projects = [
 ];
 
 const CarouselHover = () => {
-  const [hoveredProjectId, setHoveredProjectId] = useState(null);
 
   return (
     <div className="md:flex justify-center gap-1 mx-auto">
@@ -83,20 +82,31 @@ const CarouselHover = () => {
         <div
           key={project.id}
           className="items-center flex justify-center relative"
-          onMouseEnter={() => setHoveredProjectId(project.id)}
-          onMouseLeave={() => setHoveredProjectId(null)}
         >
           <div className="transition-all duration-700 rounded-lg w-[80%] md:w-[40px] hover:md:w-[500px] overflow-hidden relative">
+          <div className="relative group">
+
             <img
-              className="h-[40px] hover:h-[400px] md:h-[400px] w-full object-cover"
+              className="h-[40px] group-hover:h-[400px] md:h-[400px] w-full object-cover transition-all duration-300 z-10"
               src={project.imageSrc}
               alt={project.name}
             />
+
             <Link
               to={project.href}
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-0 inline-block rounded bg-gray-300 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium text-black hover:bg-gray-100 z-10"
+              className="md:hidden absolute bottom-5 left-1/2 transform -translate-x-1/2 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full border-2 border-gray-300 bg-black w-16 h-16 flex items-center justify-center text-xs font-medium text-gray-300 z-20"
+            >
+              <span className="text-center">{project.name}</span>
+            </Link>
+          </div>
+
+
+
+            <Link
+              to={project.href}
+              target="_blank"
+              className="hidden text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-0 md:inline-block rounded bg-gray-300 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium text-black z-20"
             >
               {project.name}
             </Link>
