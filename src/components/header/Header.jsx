@@ -16,12 +16,12 @@ const Header = () => {
                     src={tomas}
                 />
             </div>
-            <h2 className="w-full text-center text-[#aaa8a8] text-[40px] mt-[10px] mb-[10px]">
+            <h2 className="w-full text-center text-[#dfdede] text-[40px] mt-[10px] mb-[10px]">
                 Tomás <br/>
                 Niederhauser
             </h2>
             <div className='w-full text-center m-0 flex justify-center items-center'>
-                <h1 className="font-mono text-[30px] md:text-[50px] text-[#aaa8a8] whitespace-nowrap overflow-hidden
+                <h1 className="font-mono text-[30px] md:text-[50px] text-[#dfdede] whitespace-nowrap overflow-hidden
                     animate-[typing_4s_steps(20)_alternate,blink_1s_infinite_alternate] 
                     border-r-2 w-[20ch]">
                     Front-end Developer

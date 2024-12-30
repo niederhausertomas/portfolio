@@ -7,16 +7,20 @@ i18n
     resources: {
       en: {
         translation: {
-           "projects" : "Projects",
-            "skills" : "Skills",
-            "studies" : "Studies",
-            "aboutMe" : "About me",
-            "contact" : "Contact",
-            "resume" : "Resume",
-            "Hello! I'm Tomás, a passionate front-end developer. After a career as a lawyer, I discovered my true calling in programming and made the life-changing decision to dive into tech." : "Hello! I'm Tomás, a passionate front-end developer. After a career as a lawyer, I discovered my true calling in programming and made the life-changing decision to dive into tech.",
-            "I'm skilled in C++, HTML, CSS, JavaScript, and React.js, having studied at institutions like the National Technological University of Argentina, CoderHouse, and Devrock School. I've also gained hands-on experience with WordPress/PHP, Vue.js, MySQL, and TypeScript, continually learning through tutorials and developer communities to stay current." : "I'm skilled in C++, HTML, CSS, JavaScript, and React.js, having studied at institutions like the National Technological University of Argentina, CoderHouse, and Devrock School. I've also gained hands-on experience with WordPress/PHP, Vue.js, MySQL, and TypeScript, continually learning through tutorials and developer communities to stay current.",
-            "I thrive in collaborative environments, value open communication, and enjoy helping others succeed. My goal is to keep growing as a programmer and, one day, pass on my knowledge to others." : "I thrive in collaborative environments, value open communication, and enjoy helping others succeed. My goal is to keep growing as a programmer and, one day, pass on my knowledge to others.",
-            "experience":"Experience"
+          "projects" : "Projects",
+          "skills" : "Skills",
+          "studies" : "Studies",
+          "aboutMe" : "About me",
+          "contact" : "Contact",
+          "resume" : "Resume",
+          "Hello! I'm Tomás, a passionate front-end developer. After a career as a lawyer, I discovered my true calling in programming and made the life-changing decision to dive into tech." : "Hello! I'm Tomás, a passionate front-end developer. After a career as a lawyer, I discovered my true calling in programming and made the life-changing decision to dive into tech.",
+          "I'm skilled in C++, HTML, CSS, JavaScript, and React.js, having studied at institutions like the National Technological University of Argentina, CoderHouse, and Devrock School. I've also gained hands-on experience with WordPress/PHP, Vue.js, MySQL, and TypeScript, continually learning through tutorials and developer communities to stay current." : "I'm skilled in C++, HTML, CSS, JavaScript, and React.js, having studied at institutions like the National Technological University of Argentina, CoderHouse, and Devrock School. I've also gained hands-on experience with WordPress/PHP, Vue.js, MySQL, and TypeScript, continually learning through tutorials and developer communities to stay current.",
+          "I thrive in collaborative environments, value open communication, and enjoy helping others succeed. My goal is to keep growing as a programmer and, one day, pass on my knowledge to others." : "I thrive in collaborative environments, value open communication, and enjoy helping others succeed. My goal is to keep growing as a programmer and, one day, pass on my knowledge to others.",
+          "experience":"Experience",
+          "name":"Name",
+          "e-mail":"E-mail",
+          "message":"Message",
+          "submit":"Submit",
 
         }
       },
@@ -30,7 +34,13 @@ i18n
             "projects": "Proyectos",
             "resume": "Currículum",
             "skills": "Habilidades",
-            "studies": "Estudios"
+            "studies": "Estudios",
+            "experience":"Experiencia",
+            "name":"Nombre",
+            "e-mail":"Correo electrónico",
+            "message":"Mensaje",
+            "submit":"Enviar"
+
         }
       }
     },

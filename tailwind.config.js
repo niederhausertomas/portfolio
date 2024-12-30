@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: '640px',  // Pantallas pequeñas
-        md: '768px',  // Pantallas medianas
-        lg: '1024px', // Pantallas grandes
-        xl: '1280px', // Pantallas extra grandes
-        '2xl': '1536px', // Pantallas extra extra grandes
+        sm: '640px', 
+        md: '768px',  
+        lg: '1024px', 
+        xl: '1280px',
+        '2xl': '1536px',
       },
       keyframes: {
         typing: {
@@ -28,7 +28,7 @@ export default {
         },
       },
       animation: {
-        'marquee': 'marquee 30s linear infinite',
+        'marquee': 'marquee 25s linear infinite',
       },
     },
     screens: {
