@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { FlagIcon } from 'react-flag-kit';
 
 const downloadResume = () => {
-  const url = './ResumeTomasNiederhauser2024.pdf';
+  const url = './ResumeTomasNiederhauser.pdf';
   const link = document.createElement('a');
   link.href = url;
-  link.setAttribute('download', 'ResumeTomasNiederhauser2024.pdf');
+  link.setAttribute('download', 'ResumeTomasNiederhauser.pdf');
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -15,7 +15,7 @@ const downloadResume = () => {
 
 const scrollToSection = (id) => {
   const element = document.querySelector(id);
-  const offset = 80; // Ajusta este valor según sea necesario
+  const offset = 80;
   const elementPosition = element.getBoundingClientRect().top;
   const offsetPosition = elementPosition + window.scrollY - offset;
 
