@@ -18,7 +18,7 @@ const Main = () => {
       <Experience/>
 
       <h2 className="text-center m-[50px] text-[#dfdede] text-[50px]" id="projects">
-        {t("projects")}
+        {t("projects")} :)
       </h2>
       <CarouselHover/>
       
