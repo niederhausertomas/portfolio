@@ -33,11 +33,11 @@ const CarouselHover = () => {
   const [mobileExpandedId, setMobileExpandedId] = useState(null)
 
   return (
-    <div className="md:flex justify-center gap-1 mx-auto md:items-end">
+    <div className="flex flex-col gap-6 md:flex-row md:justify-center md:gap-1 mx-auto md:items-end">
       {projects.map((project) => {
         const isMobileExpanded = mobileExpandedId === project.id
         return (
-          <div key={project.id} className="items-center flex justify-center relative md:items-end">
+          <div key={project.id} className="flex justify-center relative md:items-end w-full md:w-auto">
             <div
               className={`
                 transition-all duration-500 rounded-lg overflow-hidden
