@@ -64,7 +64,11 @@ function AppContent() {
   return (
     <div className="md:pl-[160px] h-screen flex flex-col overflow-hidden bg-[#fafafa]">
       <Navbar currentSection={currentSection} onSectionChange={setCurrentSection} />
-      <div className={`flex-1 min-h-0 ${currentSection === 'studies' ? 'overflow-hidden' : 'overflow-y-auto'}`}>
+      <div className={`flex-1 min-h-0 ${
+          currentSection === 'contact' || currentSection === 'studies'
+            ? 'overflow-y-auto md:overflow-hidden'
+            : 'overflow-y-auto'
+        }`}>
         {renderSection()}
       </div>
       <Footer onNavigateToContact={() => setCurrentSection('contact')} />
