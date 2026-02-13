@@ -29,24 +29,27 @@ const studiesData = [
 
 ]
 
-const Studies = () => {
-    const shownTitles = new Set()
+const studiesByTitle = studiesData.reduce((acc, study) => {
+    const existing = acc.find((g) => g.title === study.title)
+    if (existing) existing.studies.push(study)
+    else acc.push({ title: study.title, studies: [study] })
+    return acc
+}, [])
 
+const Studies = () => {
     return (
         <div className="mx-10 text-center p-[25px] m-[25px] text-[#969494]">
-            <ul>
-                {studiesData.map(study => {
-                    const titleDisplayed = shownTitles.has(study.title);
-                    if (!titleDisplayed) {
-                        shownTitles.add(study.title)
-                    }
-                    return (
-                        <li key={study.id} className="mb-2">
-                            {!titleDisplayed && <h3 className="font-semibold text-[#cfcccc] mt-4 text-[18px]">{study.title}</h3>}
-                            <p className='text-[12px]'>{study.description}</p>
-                        </li>
-                    )
-                })}
+            <ul className="space-y-8">
+                {studiesByTitle.map((group) => (
+                    <li key={group.title}>
+                        <h3 className="font-semibold text-[#cfcccc] text-lg mb-2">{group.title}</h3>
+                        <ul className="space-y-1 list-none">
+                            {group.studies.map((study) => (
+                                <li key={study.id} className="text-sm text-[#969494]">{study.description}</li>
+                            ))}
+                        </ul>
+                    </li>
+                ))}
             </ul>
         </div>
     )

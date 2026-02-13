@@ -1,55 +1,50 @@
+import { useTranslation } from 'react-i18next';
 import './Experience.css';
 
 const Experience = () => {
-    const appliedExperience = [
-        {
-            date: "6/2024 - today",
-            name: "BIORCE / Frontend Developer",
-            description: "React.js"
-        },
-        {
-            date: "9/2023 - 6/2024",
-            name: "Chasers / Frontend Developer",
-            description: "Vue.js"
-        },
-        {
-            date: "5/2023 - 9/2023",
-            name: "Impacting.Digital / Frontend Developer",
-            description: "React.js - Wordpress"
-        },
-        {
-            date: "6/2022 - 5/2023",
-            name: "Chasers / Frontend Developer",
-            description: "Vue.js - React.js"
-        },
-        {
-            date: "6/2022 - 5/2023",
-            name: "Freelance web developer",
-            description: "HTML - CSS - Js - React.js"
-        },
-        {
-            date: "10/2016 - 6/2022",
-            name: "Supreme Court of Justice of Buenos Aires",
-            description: "Lawyer"
-        },
-    ];
+    const { t } = useTranslation();
+    const experienceKeys = [0, 1, 2, 3, 4, 5];
 
     return (
-        <div className='h-[800px]'>
+        <div className='min-h-[800px]'>
             <div className='timeline'>
-                {appliedExperience.map((experience, index) => (
-                    <div
-                        id={`experience-${index}`}
-                        className={`child`}
-                        key={index}
-                    >
-                        <div className='w-[150px] md:w-[200px] p-4 text-[#aaa8a8] -mt-12'>
-                            <h4 className='studiTitles'>{experience.date}</h4>
-                            <h4 className='studiTitles'>{experience.name}</h4>
-                            <p>{experience.description}</p>
+                {/* Línea vertical central */}
+                <div className='timeline-line' aria-hidden="true" />
+                {experienceKeys.map((index) => {
+                    const isLeft = index % 2 === 0;
+                    const date = t(`exp${index}Date`);
+                    const name = t(`exp${index}Name`);
+                    const description = t(`exp${index}Desc`);
+                    return (
+                        <div
+                            id={`experience-${index}`}
+                            className='timeline-row'
+                            key={index}
+                        >
+                            <div className={`timeline-content ${isLeft ? 'timeline-content-left' : 'timeline-content-empty'}`}>
+                                {isLeft && (
+                                    <div className="content text-[#b8b6b6] text-sm md:text-base">
+                                        <h4 className="font-semibold text-[#dfdede]">{date}</h4>
+                                        <h4 className="font-semibold text-[#dfdede] mt-1">{name}</h4>
+                                        <p className="mt-1 opacity-90">{description}</p>
+                                    </div>
+                                )}
+                            </div>
+                            <div className='timeline-marker'>
+                                <div className='timeline-dot' />
+                            </div>
+                            <div className={`timeline-content ${!isLeft ? 'timeline-content-right' : 'timeline-content-empty'}`}>
+                                {!isLeft && (
+                                    <div className="content text-[#b8b6b6] text-sm md:text-base">
+                                        <h4 className="font-semibold text-[#dfdede]">{date}</h4>
+                                        <h4 className="font-semibold text-[#dfdede] mt-1">{name}</h4>
+                                        <p className="mt-1 opacity-90">{description}</p>
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );
