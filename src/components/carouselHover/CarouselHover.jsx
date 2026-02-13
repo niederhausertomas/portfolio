@@ -51,7 +51,7 @@ const CarouselHover = () => {
                   className={`
                     h-[40px] md:h-full md:min-h-[400px] w-full object-cover transition-all duration-300 z-10
                     group-hover:md:scale-105
-                    ${isMobileExpanded ? 'h-[280px]' : 'group-hover:h-[400px]'}
+                    ${isMobileExpanded ? 'h-[360px]' : 'group-hover:h-[400px]'}
                   `}
                   src={project.imageSrc}
                   alt={project.name}
@@ -74,7 +74,7 @@ const CarouselHover = () => {
                   className={`
                     md:hidden absolute bottom-4 left-1/2 -translate-x-1/2 z-20
                     flex items-center justify-center gap-1
-                    rounded-lg bg-accent text-black px-4 py-2 text-sm font-medium
+                    rounded-lg bg-[#1a1a1a] text-white px-4 py-2 text-sm font-medium
                     transition-all duration-300
                     ${isMobileExpanded ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}
                   `}
@@ -87,7 +87,7 @@ const CarouselHover = () => {
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:flex items-center justify-center gap-1 flex-shrink-0 h-14 rounded-b-lg bg-gray-200 px-3 py-2 text-sm font-medium text-black z-20 hover:bg-accent transition-colors duration-200"
+                className="hidden md:flex items-center justify-center gap-1 flex-shrink-0 h-14 rounded-b-lg bg-[#eee] px-3 py-2 text-sm font-medium text-[#1a1a1a] z-20 hover:bg-[#1a1a1a] hover:text-white transition-colors duration-200"
               >
                 {project.name}
                 <ExternalLinkIcon />

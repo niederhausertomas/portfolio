@@ -1,60 +1,80 @@
 footer {
-    width: 100%;
-    margin: auto;
-    margin-top: 24px;
-    padding: 20px 0 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  margin: auto;
+  margin-top: 0;
+  padding: 12px 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fafafa;
 }
 
 footer ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 24px;
-    width: 100%;
-    padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 28px;
+  width: 100%;
+  padding: 0 0 6px;
 }
 
 footer a {
-    width: 30px;
-    height: 30px;
-    opacity: 65%; 
-    fill: white;
+  width: 24px;
+  height: 24px;
+  color: #666;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 footer a:hover,
 footer a:focus-visible {
-    opacity: 100%;
-    transform: translateY(-2px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  color: #1a1a1a;
+  transform: translateY(-1px);
 }
 
 footer a:focus-visible {
-    outline: 2px solid #22d3ee;
-    outline-offset: 4px;
+  outline: 2px solid #1a1a1a;
+  outline-offset: 4px;
 }
 
+footer .footer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+footer .footer-contact-btn:hover,
+footer .footer-contact-btn:focus-visible {
+  color: #1a1a1a;
+  transform: translateY(-1px);
+}
+
+footer .footer-contact-btn:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 4px;
+}
+
+footer p {
+  color: #999;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
 
 @media only screen and (max-width: 420px) {
-    
-    footer {
-      margin-top: 0px;
-      width: 100%; 
-    }
-    
-    .nav-item:hover {
-      padding-top: 0px;
-      margin-bottom: 0px;
-      transition: none; 
-    } 
+  footer {
+    padding: 10px 0 14px;
+  }
 }
-  
+
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-    footer {
-        margin-top: 48px;
-        width: 100%;
-    }
+  footer {
+    margin-top: 0;
+  }
 }

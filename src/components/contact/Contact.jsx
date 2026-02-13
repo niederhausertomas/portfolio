@@ -1,13 +1,13 @@
 import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const inputClass = 'w-full max-w-md px-4 py-3 bg-surface-input border border-gray-600 rounded-lg text-[#e5e5e5] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition duration-200'
-const labelClass = 'block text-[#b8b6b6] text-sm font-medium mb-1'
+const inputClass = 'w-full max-w-md px-4 py-3 bg-white border border-[#e5e5e5] rounded-md text-[#1a1a1a] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] focus:border-transparent transition duration-200'
+const labelClass = 'block text-[#555] text-sm font-medium mb-1'
 
 const Contact = () => {
   const formRef = useRef(null)
   const { t } = useTranslation()
-  const [status, setStatus] = useState(null) // 'success' | 'error' | null
+  const [status, setStatus] = useState(null)
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -31,8 +31,8 @@ const Contact = () => {
   }
 
   return (
-    <section className="flex flex-col items-center py-16 md:py-20 scroll-mt-20" id="contact">
-      <h2 className="text-[#dfdede] text-3xl md:text-5xl text-center font-medium mb-10">
+    <section className="flex flex-col items-center py-20 md:py-28 scroll-mt-20" id="contact">
+      <h2 className="font-serif text-[#1a1a1a] text-3xl md:text-4xl text-center font-normal mb-12 md:mb-14">
         {t('contact')}
       </h2>
       <form
@@ -82,17 +82,17 @@ const Contact = () => {
         </div>
         <button
           type="submit"
-          className="mt-6 px-8 py-3 rounded-lg bg-accent text-black font-medium hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
+          className="mt-6 px-8 py-3 rounded-md bg-[#555] text-white font-medium hover:bg-[#666] focus:outline-none focus:ring-2 focus:ring-[#555] focus:ring-offset-2 focus:ring-offset-[#fafafa] transition-all duration-200"
         >
           {t('submit')}
         </button>
         {status === 'success' && (
-          <p className="mt-4 text-accent text-sm" role="status">
+          <p className="mt-4 text-[#1a1a1a] text-sm" role="status">
             {t('messageSent')}
           </p>
         )}
         {status === 'error' && (
-          <p className="mt-4 text-red-400 text-sm" role="alert">
+          <p className="mt-4 text-red-600 text-sm" role="alert">
             {t('sendError')}
           </p>
         )}

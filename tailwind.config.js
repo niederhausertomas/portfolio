@@ -8,18 +8,19 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Instrument Serif', 'Georgia', 'serif'],
         mono: ['ui-monospace', 'monospace'],
       },
       colors: {
         accent: {
-          DEFAULT: '#22d3ee',
-          hover: '#06b6d4',
-          muted: '#0891b2',
+          DEFAULT: '#1a1a1a',
+          hover: '#333',
+          muted: '#666',
         },
         surface: {
-          input: '#1f2937',
-          card: '#111827',
+          input: '#f5f5f5',
+          card: '#fff',
         },
       },
       screens: {
@@ -56,7 +57,7 @@ export default {
     function({ addComponents }) {
       addComponents({
         '.swiper-button-next, .swiper-button-prev': {
-          color: '#ffffff',
+          color: '#1a1a1a',
         },
       })
     },

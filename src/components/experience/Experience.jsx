@@ -6,7 +6,7 @@ const Experience = () => {
     const experienceKeys = [0, 1, 2, 3, 4, 5];
 
     return (
-        <div className='min-h-[800px]'>
+        <div className='min-h-0'>
             <div className='timeline'>
                 {/* Línea vertical central */}
                 <div className='timeline-line' aria-hidden="true" />
@@ -23,10 +23,10 @@ const Experience = () => {
                         >
                             <div className={`timeline-content ${isLeft ? 'timeline-content-left' : 'timeline-content-empty'}`}>
                                 {isLeft && (
-                                    <div className="content text-[#b8b6b6] text-sm md:text-base">
-                                        <h4 className="font-semibold text-[#dfdede]">{date}</h4>
-                                        <h4 className="font-semibold text-[#dfdede] mt-1">{name}</h4>
-                                        <p className="mt-1 opacity-90">{description}</p>
+                                    <div className="content text-[#666] font-light text-xs md:text-sm">
+                                        <h4 className="font-medium text-[#444]">{date}</h4>
+                                        <h4 className="font-medium text-[#555] mt-1">{name}</h4>
+                                        <p className="mt-1 text-[#777] text-[11px] md:text-xs">{description}</p>
                                     </div>
                                 )}
                             </div>
@@ -35,10 +35,10 @@ const Experience = () => {
                             </div>
                             <div className={`timeline-content ${!isLeft ? 'timeline-content-right' : 'timeline-content-empty'}`}>
                                 {!isLeft && (
-                                    <div className="content text-[#b8b6b6] text-sm md:text-base">
-                                        <h4 className="font-semibold text-[#dfdede]">{date}</h4>
-                                        <h4 className="font-semibold text-[#dfdede] mt-1">{name}</h4>
-                                        <p className="mt-1 opacity-90">{description}</p>
+                                    <div className="content text-[#666] font-light text-xs md:text-sm">
+                                        <h4 className="font-medium text-[#444]">{date}</h4>
+                                        <h4 className="font-medium text-[#555] mt-1">{name}</h4>
+                                        <p className="mt-1 text-[#777] text-[11px] md:text-xs">{description}</p>
                                     </div>
                                 )}
                             </div>

@@ -3,8 +3,8 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 /* Línea vertical central: siempre visible y al centro */
@@ -13,8 +13,8 @@
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: rgba(255, 255, 255, 0.3);
+  width: 1px;
+  background: rgba(0, 0, 0, 0.08);
   transform: translateX(-50%);
   z-index: 0;
   pointer-events: none;
@@ -25,7 +25,7 @@
   align-items: flex-start;
   position: relative;
   z-index: 1;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   gap: 0;
 }
 
@@ -62,12 +62,12 @@
   position: absolute;
   left: 50%;
   top: 6px;
-  width: 14px;
-  height: 14px;
-  margin-left: -7px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
   border-radius: 50%;
-  background: #22d3ee;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+  background: #888;
+  box-shadow: 0 0 0 3px #fafafa;
   z-index: 2;
 }
 

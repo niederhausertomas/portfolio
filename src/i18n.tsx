@@ -7,15 +7,17 @@ i18n
     resources: {
       en: {
         translation: {
+          "home" : "Home",
           "projects" : "Projects",
           "skills" : "Skills",
           "studies" : "Studies",
           "aboutMe" : "About me",
+          "aboutP1": "Hello! I'm Tomás, a Front-End Team Lead with a strong passion for building scalable, high-quality digital products.",
+          "aboutP2": "After starting my career as a lawyer, I transitioned into tech and discovered my true calling in software development. Since then, I've grown from developer to team lead, combining hands-on technical expertise with leadership and strategic thinking.",
+          "aboutP3": "I specialize in modern front-end development with React, TypeScript, and scalable architecture patterns. Beyond coding, I focus on improving development workflows, fostering strong communication within teams, mentoring developers, and aligning technical decisions with product and business goals.",
+          "aboutP4": "I thrive in collaborative environments where ownership, clarity, and continuous improvement are key. My goal is to keep evolving as a technical leader, building high-performing teams and delivering meaningful digital experiences.",
           "contact" : "Contact",
           "resume" : "Resume",
-          "Hello! I'm Tomás, a passionate front-end developer. After a career as a lawyer, I discovered my true calling in programming and made the life-changing decision to dive into tech." : "Hello! I'm Tomás, a passionate front-end developer. After a career as a lawyer, I discovered my true calling in programming and made the life-changing decision to dive into tech.",
-          "I'm skilled in C++, HTML, CSS, JavaScript, and React.js, having studied at institutions like the National Technological University of Argentina, CoderHouse, and Devrock School. I've also gained hands-on experience with WordPress/PHP, Vue.js, MySQL, and TypeScript, continually learning through tutorials and developer communities to stay current." : "I'm skilled in C++, HTML, CSS, JavaScript, and React.js, having studied at institutions like the National Technological University of Argentina, CoderHouse, and Devrock School. I've also gained hands-on experience with WordPress/PHP, Vue.js, MySQL, and TypeScript, continually learning through tutorials and developer communities to stay current.",
-          "I thrive in collaborative environments, value open communication, and enjoy helping others succeed. My goal is to keep growing as a programmer and, one day, pass on my knowledge to others." : "I thrive in collaborative environments, value open communication, and enjoy helping others succeed. My goal is to keep growing as a programmer and, one day, pass on my knowledge to others.",
           "experience":"Experience",
           "name":"Name",
           "e-mail":"E-mail",
@@ -47,11 +49,13 @@ i18n
       },
       es: {
         translation: {
+            "home": "Inicio",
             "aboutMe": "Sobre mí",
+            "aboutP1": "¡Hola! Soy Tomás, Front-End Team Lead con una gran pasión por construir productos digitales escalables y de alta calidad.",
+            "aboutP2": "Después de comenzar mi carrera como abogado, me reconvertí al mundo tech y descubrí mi verdadera vocación en el desarrollo de software. Desde entonces, he pasado de desarrollador a líder de equipo, combinando experiencia técnica práctica con liderazgo y pensamiento estratégico.",
+            "aboutP3": "Me especializo en desarrollo front-end moderno con React, TypeScript y patrones de arquitectura escalables. Más allá del código, me enfoco en mejorar los flujos de desarrollo, fomentar una comunicación sólida dentro de los equipos, mentorizar desarrolladores y alinear las decisiones técnicas con los objetivos del producto y del negocio.",
+            "aboutP4": "Me desenvuelvo bien en entornos colaborativos donde el ownership, la claridad y la mejora continua son clave. Mi objetivo es seguir evolucionando como líder técnico, construyendo equipos de alto rendimiento y entregando experiencias digitales significativas.",
             "contact": "Contacto",
-            "Hello! I'm Tomás, a passionate front-end developer. After a career as a lawyer, I discovered my true calling in programming and made the life-changing decision to dive into tech.": "¡Hola! Soy Tomás, un apasionado desarrollador front-end. Después de una carrera como abogado, descubrí mi verdadera vocación en la programación y tomé la decisión que cambió mi vida al adentrarme en la tecnología.",
-            "I thrive in collaborative environments, value open communication, and enjoy helping others succeed. My goal is to keep growing as a programmer and, one day, pass on my knowledge to others.": "Me desenvuelvo bien en entornos colaborativos, valoro la comunicación abierta y disfruto ayudar a otros a tener éxito. Mi objetivo es seguir creciendo como programador y, algún día, transmitir mi conocimiento a otros.",
-            "I'm skilled in C++, HTML, CSS, JavaScript, and React.js, having studied at institutions like the National Technological University of Argentina, CoderHouse, and Devrock School. I've also gained hands-on experience with WordPress/PHP, Vue.js, MySQL, and TypeScript, continually learning through tutorials and developer communities to stay current.": "Tengo habilidades en C++, HTML, CSS, JavaScript y React.js, y he estudiado en instituciones como la Universidad Tecnológica Nacional de Argentina, CoderHouse y Devrock School. También he adquirido experiencia práctica con WordPress/PHP, Vue.js, MySQL y TypeScript, aprendiendo continuamente a través de tutoriales y comunidades de desarrolladores para mantenerme actualizado.",
             "projects": "Proyectos",
             "resume": "Currículum",
             "skills": "Habilidades",
