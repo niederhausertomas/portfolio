@@ -23,7 +23,7 @@ function AppContent() {
         return <Header onViewProjects={() => setCurrentSection('projects')} />
       case 'projects':
         return (
-          <div className="bg-[#fafafa] min-h-full py-20 md:py-28">
+          <div className="bg-[#fafafa] min-h-full pt-20 pb-40 md:py-28">
             <div className="max-w-4xl mx-auto px-6 md:px-8">
               <h2 className={sectionTitleClass}>{t('projects')}</h2>
               <CarouselHover />
@@ -32,7 +32,7 @@ function AppContent() {
         )
       case 'experience':
         return (
-          <div className="bg-[#fafafa] min-h-full pt-20 md:pt-28 pb-8 md:pb-12">
+          <div className="bg-[#fafafa] min-h-full pt-20 md:pt-28 pb-16 md:pb-12">
             <div className="max-w-4xl mx-auto px-6 md:px-8">
               <h2 className={sectionTitleClass}>{t('experience')}</h2>
               <Experience />
@@ -52,7 +52,7 @@ function AppContent() {
         return <About />
       case 'contact':
         return (
-          <div className="bg-[#fafafa] min-h-full">
+          <div className="bg-[#fafafa] min-h-full pb-16 md:pb-0">
             <Contact />
           </div>
         )
