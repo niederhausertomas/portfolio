@@ -9,7 +9,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Instrument Serif', 'Georgia', 'serif'],
+        /* Misma pila que en localhost para que Netlify se vea igual */
+        serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
         mono: ['ui-monospace', 'monospace'],
       },
       colors: {
