@@ -62,9 +62,9 @@ function AppContent() {
   }
 
   return (
-    <div className="md:pl-[160px] h-screen flex flex-col overflow-hidden bg-[#fafafa]">
+    <div className="md:pl-[120px] h-screen flex flex-col overflow-hidden bg-[#fafafa]">
       <Navbar currentSection={currentSection} onSectionChange={setCurrentSection} />
-      <div className={`flex-1 min-h-0 ${
+      <div className={`flex-1 min-h-0 pt-14 md:pt-0 ${
           currentSection === 'contact' || currentSection === 'studies'
             ? 'overflow-y-auto md:overflow-hidden'
             : 'overflow-y-auto'

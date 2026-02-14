@@ -31,7 +31,7 @@ const Contact = () => {
   }
 
   return (
-    <section className="flex flex-col items-center py-20 md:py-28 scroll-mt-20" id="contact">
+    <section className="flex flex-col items-center py-20 md:py-28 px-4 md:px-0 scroll-mt-20" id="contact">
       <h2 className="font-serif text-[#1a1a1a] text-3xl md:text-4xl text-center font-normal mb-12 md:mb-14">
         {t('contact')}
       </h2>

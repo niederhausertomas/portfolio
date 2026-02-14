@@ -1,5 +1,11 @@
-import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {
+  HomeIcon,
+  FolderIcon,
+  BriefcaseIcon,
+  AcademicCapIcon,
+  UserCircleIcon,
+  EnvelopeIcon,
+} from '@heroicons/react/24/outline'
 import { useTranslation } from 'react-i18next'
 import { FlagIcon } from 'react-flag-kit'
 
@@ -19,106 +25,92 @@ export default function Navbar({ currentSection, onSectionChange }) {
     i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es')
   }
 
+  const navIcons = {
+    home: HomeIcon,
+    projects: FolderIcon,
+    experience: BriefcaseIcon,
+    studies: AcademicCapIcon,
+    about: UserCircleIcon,
+    contact: EnvelopeIcon,
+  }
+
   const navigation = [
     { name: t('home'), section: 'home' },
-    { name: t('projects'), section: 'projects' },
-    { name: t('experience'), section: 'experience' },
-    { name: t('studies'), section: 'studies' },
     { name: t('aboutMe'), section: 'about' },
+    { name: t('studies'), section: 'studies' },
+    { name: t('experience'), section: 'experience' },
+    { name: t('projects'), section: 'projects' },
     { name: t('contact'), section: 'contact' },
   ]
 
-  const handleNavClick = (section) => {
-    onSectionChange(section)
-    document.querySelector('[data-mobile-menu-toggle]')?.click()
-  }
-
   const navLinkClass = (section) =>
-    `text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] rounded px-1 py-2 text-left ${
+    `text-sm font-medium transition-colors focus:outline-none rounded px-1 py-2 text-left ${
       currentSection === section ? 'text-[#1a1a1a]' : 'text-[#666] hover:text-[#1a1a1a]'
     }`
 
-  const closeMobileMenu = () => {
-    document.querySelector('[data-mobile-menu-toggle]')?.click()
-  }
-
   return (
     <>
-      {/* Mobile: barra superior con hamburger */}
-      <Disclosure
-        as="nav"
-        className="fixed top-0 left-0 right-0 z-50 flex h-16 items-center justify-between px-4 bg-[#fafafa] border-b border-[#e5e5e5] md:hidden"
-      >
-        {({ open }) => (
-          <>
-            <Disclosure.Button
-              data-mobile-menu-toggle
-              className="inline-flex items-center justify-center rounded-md p-2 text-[#1a1a1a] hover:bg-[#eee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a1a1a]"
-              aria-label="Abrir menú"
-            >
-              {open ? (
-                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </Disclosure.Button>
-            <div className="flex items-center gap-2">
+      {/* Mobile: barra superior con navegación + Resume + idioma */}
+      <header className="fixed top-0 left-0 right-0 z-50 flex h-14 items-center justify-between gap-1 px-2 sm:px-4 bg-[#fafafa] border-b border-[#e5e5e5] md:hidden">
+        <nav aria-label="Navegación principal" className="flex flex-1 items-center justify-around min-w-0">
+          {navigation.map((item) => {
+            const Icon = navIcons[item.section]
+            return (
               <button
-                onClick={downloadResume}
-                className="px-3 py-2 text-sm font-medium text-[#1a1a1a] hover:underline"
+                key={item.section}
+                onClick={() => onSectionChange(item.section)}
+                className={`flex items-center justify-center p-2 rounded-md transition-colors focus:outline-none shrink-0 ${navLinkClass(item.section)}`}
+                aria-label={item.name}
+                aria-current={currentSection === item.section ? 'page' : undefined}
               >
-                {t('resume')}
+                {Icon && <Icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />}
               </button>
-              <button
-                onClick={changeLanguage}
-                className="p-2 rounded-md text-[#666] hover:text-[#1a1a1a] hover:bg-[#eee]"
-                aria-label="Idioma"
-              >
-                {i18n.language === 'es' ? <FlagIcon code="ES" size={22} /> : <FlagIcon code="GB" size={22} />}
-              </button>
-            </div>
-            {/* Overlay: al hacer click fuera del menú se cierra */}
-            {open && (
-              <div
-                className="fixed inset-0 top-16 z-40 bg-black/20 md:hidden"
-                onClick={closeMobileMenu}
-                onKeyDown={(e) => e.key === 'Escape' && closeMobileMenu()}
-                aria-hidden="true"
-              />
-            )}
-            <Disclosure.Panel className="absolute left-0 right-0 top-16 z-[51] bg-[#fafafa] border-b border-[#e5e5e5] shadow-sm">
-              <div className="space-y-1 px-4 py-4">
-                {navigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.section}
-                    as="button"
-                    onClick={() => handleNavClick(item.section)}
-                    className={`w-full text-left px-3 py-2.5 rounded-md text-sm font-medium ${navLinkClass(item.section)}`}
-                  >
-                    {item.name.toUpperCase()}
-                  </Disclosure.Button>
-                ))}
-              </div>
-            </Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
+            )
+          })}
+        </nav>
+        <div className="flex items-center gap-1 shrink-0">
+          <button
+            onClick={downloadResume}
+            className="px-2 py-1.5 text-xs sm:text-sm font-medium text-[#1a1a1a] hover:underline"
+          >
+            {t('resume')}
+          </button>
+          <button
+            onClick={changeLanguage}
+            className="p-1.5 rounded-md text-[#666] hover:text-[#1a1a1a] hover:bg-[#eee]"
+            aria-label="Idioma"
+          >
+            {i18n.language === 'es' ? <FlagIcon code="ES" size={20} /> : <FlagIcon code="GB" size={20} />}
+          </button>
+        </div>
+      </header>
 
       {/* Desktop: sidebar fija a la izquierda */}
       <aside
         aria-label="Navegación principal"
-        className="hidden md:flex fixed left-0 top-0 bottom-0 z-40 w-[160px] flex-col border-r border-[#e5e5e5] bg-[#fafafa]"
+        className="hidden md:flex fixed left-0 top-0 bottom-0 z-40 w-[120px] flex-col bg-[#fafafa]"
       >
-        <nav className="flex flex-col gap-1 pt-24 px-4">
-          {navigation.map((item) => (
-            <button
-              key={item.section}
-              onClick={() => onSectionChange(item.section)}
-              className={navLinkClass(item.section)}
-            >
-              {item.name.toUpperCase()}
-            </button>
-          ))}
+        <nav className="flex flex-col gap-1 pt-24 px-4 overflow-visible">
+          {navigation.map((item) => {
+            const Icon = navIcons[item.section]
+            return (
+              <div key={item.section} className="relative group">
+                <button
+                  onClick={() => onSectionChange(item.section)}
+                  className={`w-full flex items-center justify-center px-3 py-2.5 rounded-md ${navLinkClass(item.section)}`}
+                  aria-label={item.name}
+                >
+                  {Icon && <Icon className="h-6 w-6" aria-hidden="true" />}
+                </button>
+                <span
+                  className="absolute left-full ml-2 top-1/2 -translate-y-1/2 px-2.5 py-1.5 text-xs font-medium text-white bg-[#1a1a1a] rounded shadow-sm whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 pointer-events-none z-[60]"
+                  role="tooltip"
+                >
+                  {item.name}
+                </span>
+              </div>
+            )
+          })}
         </nav>
         <div className="mt-auto px-4 pb-8 flex flex-col gap-3">
           <button
