@@ -5,7 +5,7 @@ const sectionTitleClass = 'w-full text-center font-serif text-[#1a1a1a] text-3xl
 const About = () => {
   const { t } = useTranslation()
   return (
-    <section className="py-20 md:py-28 max-w-4xl mx-auto px-6 md:px-8">
+    <section className="pt-20 pb-24 md:py-28 max-w-4xl mx-auto px-6 md:px-8">
       <h2 className={sectionTitleClass}>{t('aboutMe')}</h2>
       <div className="text-center px-0 mx-auto max-w-[640px]">
         <p className="text-justify text-base my-6 text-[#555] leading-relaxed font-light">

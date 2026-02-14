@@ -32,7 +32,7 @@ function AppContent() {
         )
       case 'experience':
         return (
-          <div className="bg-[#fafafa] min-h-full pt-20 md:pt-28 pb-16 md:pb-12">
+          <div className="bg-[#fafafa] min-h-full pt-20 md:pt-28 pb-24 md:pb-12">
             <div className="max-w-4xl mx-auto px-6 md:px-8">
               <h2 className={sectionTitleClass}>{t('experience')}</h2>
               <Experience />
@@ -41,7 +41,7 @@ function AppContent() {
         )
       case 'studies':
         return (
-          <div className="bg-[#fafafa] min-h-full py-20 md:py-28">
+          <div className="bg-[#fafafa] min-h-full pt-20 pb-24 md:py-28">
             <div className="max-w-4xl mx-auto px-6 md:px-8">
               <h2 className={sectionTitleClass}>{t('studies')}</h2>
               <Studies />
