@@ -22,7 +22,10 @@ const Header = ({ onViewProjects }) => {
               Niederhauser
             </h1>
             <p className="mt-4 text-lg md:text-xl text-[#666] font-light max-w-xl">
-              {t('frontEndDeveloper')}.
+              {t('professionalHeadline')}
+            </p>
+            <p className="mt-3 text-sm md:text-base text-[#7a7a7a] font-light max-w-2xl leading-relaxed">
+              {t('professionalSubtitle')}
             </p>
 
           </div>

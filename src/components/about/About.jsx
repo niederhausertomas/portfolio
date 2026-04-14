@@ -20,6 +20,9 @@ const About = () => {
         <p className="text-justify text-base my-6 text-[#555] leading-relaxed font-light">
           {t('aboutP4')}
         </p>
+        <p className="text-justify text-base my-6 text-[#555] leading-relaxed font-light">
+          {t('aboutP5')}
+        </p>
       </div>
     </section>
   )
